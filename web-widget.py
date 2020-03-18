@@ -25,7 +25,5 @@ window.set_title("TRIANTARES 2019")
 window.set_default_size(800,600)
 window.add(webview)
 window.show_all()
+window.connect("destroy",Gtk.main_quit)
 Gtk.main()
-def on_destroy(window):
-    Gtk.main_quit()
-window.connect("destroy",on_destroy)
